@@ -574,11 +574,11 @@ h2, .section-heading a {
 }
 .logo_c
 {
-	margin-top:50px;
+	margin-top:0px;
 	height:400px;
 	margin-left:-140px;
 	position:absolute;
-	width:600px;
+	width:500px;
 }
 #logo:hover {
 	text-decoration: none;
@@ -756,8 +756,8 @@ h2, .section-heading a {
 }
 
 .diagonal-holder .slider-diagonal-overflow {
-	width: 60%;
-	height: 540px;
+	width: 90%;
+	height: 530px;
 	position: absolute;
 	z-index: 0;
 	top: 0;
@@ -826,7 +826,7 @@ h2, .section-heading a {
 	width: 85%;
 	height: 32px;
 	
-	margin-top: 40px;
+	margin-top: 0px;
 	color:#900;
 	font-family: 'LaneNarrowRegular', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 27px;
@@ -850,8 +850,8 @@ h2, .section-heading a {
 }
 .d
 {
-	margin-top:130px;
-	margin-left:215px;
+	margin-top:80px;
+	margin-left:145px;
 }
 
 .uber-more:hover {
@@ -884,7 +884,7 @@ h2, .section-heading a {
 /* slider tiles */
 
 .slider-tile {
-	margin-top:-100px;
+	margin-top:-112px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
