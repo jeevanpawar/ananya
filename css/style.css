@@ -639,8 +639,8 @@ h2, .section-heading a {
 .child-menu, .child-promo {
 	float: left;
 	margin-left: 35px;
-	margin-top: 30px;
-	margin-bottom:35px;
+	margin-top: 5px;
+	margin-bottom:5px;
 }
 
 #main-nav li .child-menu-main, #main-nav li .child-menu-context {
