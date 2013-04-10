@@ -1,0 +1,34 @@
+/*
+  CSS for IE8 support.
+  The site does not look good, but IE8 users see ugly sites only.
+  The purpose here is to make the site at least usable.
+  
+  Please, update your browsers so we don't have to write 
+  this kind of code anymore.
+*/
+
+
+.featured-brands > a {
+  margin-right: 0;
+}
+
+.product-badge {
+  display: none;
+}
+
+.twitter-name, .footer-promo, .mailto {
+  font-size: 18px !important;
+}
+
+.tweet a {
+  font-size: 14px !important;
+}
+
+.remove:before {
+  width: 0;
+  height: 0;
+}
+
+.remove.absolute {
+  bottom: -68px;
+}
