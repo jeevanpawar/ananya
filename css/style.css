@@ -590,7 +590,7 @@ h2, .section-heading a {
 	width:750px;
 	height:50px;
 	
-	margin-left:400px;
+	margin-left:45%;
 	margin-top: -65px;
 }
 
@@ -625,7 +625,7 @@ h2, .section-heading a {
 
 .child-nav {
 	position: absolute;
-	width: 150px;
+	width: 120px;
 	top: 28px;
 	left: 0;
 	background-color:#000;
