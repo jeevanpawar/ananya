@@ -92,7 +92,7 @@
 
 		//// Main menu drop-down
 
-		$( "#main-nav li" ).hoverIntent( function() {
+		$( "#menu li" ).hoverIntent( function() {
 			$( '.header-container' ).css( 'z-index', '2' );
 			$( this ).children( ".child-nav" ).stop( true, true ).slideDown( 300 );
 			$( this ).children( ':first' ).css( 'color', '#70a3d8' );

@@ -17,7 +17,7 @@
 	var slider = {};
 	var DURATION = 800;
 	var CONTENT_DURATION = 500;
-	var INTERVAL = 5000;
+	var INTERVAL = 10000;
 
 
 	slider.busy = false;

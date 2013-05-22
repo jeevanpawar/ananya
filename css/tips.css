@@ -159,10 +159,6 @@
 
 /* --------------------------------- MAIN STYLING AND TYPOGRAPHY --------------------- */
 
-body {
-	overflow-x: hidden;
-}
-
 p, span, a {
 	font-family: Arial, Verdana, sans-serif;
 	font-size: 14px;
@@ -571,7 +567,7 @@ h2, .section-heading a {
 {
 	margin-top:-55px;
 	height:300px;
-	margin-left:-80px;
+	margin-left:-150px;
 	width:400px;
 }
 
@@ -580,49 +576,40 @@ h2, .section-heading a {
 	text-decoration: none;
 }
 
-#main-nav {
+#menu {
 	display: block;
-	margin-left:400px;
-	margin-top: -210px;
-	width:750px;
+	width:1250px;
+	height:50px;
+	margin-left:30%;
+	margin-top: -215px;
 }
 
-#main-nav li {
+#menu li {
 	display: inline;
 	position: relative;
 	font-family: 'RalewayThin', 'Segoe UI', Helvetica, Arial, sans-serif;
-	font-size: 24px;
+	font-size: 17px;
 	color: white;
 	
 	margin: 0; /* adding 0 here because of the annoying -webkit-margin */
 	padding: 0; /* -- || -- */
 }
 
-#main-nav li a {
+#menu li a {
 	font-family: 'RalewayThin', 'Segoe UI', Helvetica, Arial, sans-serif;
-	font-size: 24px;
+	font-size: 17px;
 	color: white;
 
-	-webkit-transition: color 0.25s ease-in;
-	-moz-transition: color 0.25s ease-in;
-	-ms-transition: color 0.25s ease-in;
-	-o-transition: color 0.25s ease-in;
-	transition: color 0.25s ease-in;
+	
 }
-#main-nav li a:hover {
+#menu li a:hover {
 	color: #70a3d8;
 	text-decoration: none;
 }
 .child-nav {
 	position: absolute;
-	width: 150px;
 	top: 28px;
-	left: 0;
-	background-color:#000;
-	-moz-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); 
-	-webkit-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); 
-	-o-box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); 
-	box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5); 
+	left: -35px;
 	z-index: 100;
 }
 
@@ -633,30 +620,30 @@ h2, .section-heading a {
 		margin-bottom:5px;
 }
 
-#main-nav li .child-menu-main, #main-nav li .child-menu-context {
+#menu li .child-menu-main, #menu li .child-menu-context {
 	padding: 0;
 }
 
-#main-nav li .child-menu-main li, #main-nav li .child-menu-context li {
+#menu li .child-menu-main li, #menu li .child-menu-context li {
 	display: block;
 }
 
-#main-nav li .child-menu-main li a, #main-nav li .child-menu-main li,
-#main-nav li .child-menu-context li, #main-nav li .child-menu-context li a {
+#menu li .child-menu-main li a, #menu li .child-menu-main li,
+#menu li .child-menu-context li, #menu li .child-menu-context li a {
 	font-family: Arial, Verdana, sans-serif;
 	font-size: 14px;
 	color: #fff;
 }
 
-#main-nav li .child-menu-context {
+#menu li .child-menu-context {
 	margin-top: 50px;
 }
 
-#main-nav li .child-menu-context li, #main-nav li .child-menu-context li a {
+#menu li .child-menu-context li, #menu li .child-menu-context li a {
 	color: #70a3d8;
 }
 
- #main-nav li .child-menu-context li a:hover, #main-nav li .child-menu-main li a:hover {
+ #menu li .child-menu-context li a:hover, #menu li .child-menu-main li a:hover {
  	text-decoration: underline;
  }
 
@@ -698,7 +685,7 @@ h2, .section-heading a {
  	height: 80px;
  }
 
- #main-nav .child-promo-overlay a {
+ #menu .child-promo-overlay a {
  	display: block;
 	color: white;
 	font-family: 'LaneNarrowRegular', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -1274,15 +1261,17 @@ h2, .section-heading a {
 
 .footer-container {
 	width: 100%;
-	background-color: #edeef0;
+	background-color:#63282a;
 	margin-top: 40px;
 }
 
 .footer-heading {
 	font-size: 24px;
+	color:#FFF;
 	margin-bottom: 0;
 	margin-top: 40px;
 }
+
 
 .footer-nav-group {
 	margin-left: 0;
@@ -2672,7 +2661,7 @@ input.quotes {
 		margin-left: -30px;
 	}
 
-	#main-nav li, #main-nav li a {
+	#menu li, #menu li a {
 		font-size: 30px;
 	}
 
@@ -2978,7 +2967,7 @@ input.quotes {
 		margin-left: -1px;
 	}
 
-	#main-nav li, #main-nav li a {
+	#menu li, #menu li a {
 		font-size: 23px;
 	}
 
@@ -3468,7 +3457,7 @@ input.quotes {
 		padding-left: 0;
 	}
 
-	#main-nav li {
+	#menu li {
 		display: block;
 		width: 100%;
 		text-align: center;
