@@ -627,17 +627,17 @@ h2, .section-heading a {
 	float: left;
 	margin-left: 35px;
 	margin-top: 5px;
-	margin-bottom:5px;
+
 }
 
 #menu li .child-menu-main, #menu li .child-menu-context {
 	padding: 0;
-
+	
 }
 
 #menu li .child-menu-main li, #menu li .child-menu-context li {
 	display: block;
-		margin-top:1px;
+	margin-top:5px;
 }
 
 #menu li .child-menu-main li a, #menu li .child-menu-main li,
@@ -645,6 +645,7 @@ h2, .section-heading a {
 	font-family: Arial, Verdana, sans-serif;
 	font-size: 14px;
 	color: #fff;
+
 }
 
 #menu li .child-menu-context {
@@ -963,7 +964,19 @@ h2, .section-heading a {
 	margin-left: 3%;
 	overflow: hidden;
 }
-
+.t_name
+{
+	margin-top:40px;
+	font-size:24px;
+	letter-spacing:5px;
+}
+.tips
+{
+	margin-top:20px;
+	letter-spacing:2px;
+	text-align:justify;
+	text-indent:50px;
+}
 .product-image {
 	display: block;
 	width: 100%;
@@ -1626,9 +1639,17 @@ h2, .section-heading a {
 .subheading {
 	font-family: 'RalewayThin', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 24px;
-	font-weight: normal;
+	font-weight:bold;
+	
 }
-
+.prod
+{
+	letter-spacing:2px;
+	font-size:22px;
+	margin-top:20px;
+	color:#999;
+	
+}
 .side-nav {
 	margin-left: 0;
 	margin-bottom: 0;
