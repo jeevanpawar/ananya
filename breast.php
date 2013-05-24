@@ -210,6 +210,7 @@
 					
 					
 					<div class="t_name"><?php echo $row[1]; ?></div>
+                    <br>
 					<div class="row">
 						<div class="span2 product-small">
 							<div class="product-overflow-keeper">
@@ -229,7 +230,7 @@
 					</div>
 					
 				</div>
-			<div class="t_name">
+			<div class="b_tip">
             Beauty Tips
 			</div>
             <div class="tips">

@@ -966,8 +966,14 @@ h2, .section-heading a {
 }
 .t_name
 {
-	margin-top:40px;
+	margin-top:30px;
 	font-size:24px;
+	letter-spacing:5px;
+}
+.b_tip
+{
+	font-size:24px;
+		margin-top:40px;
 	letter-spacing:5px;
 }
 .tips
