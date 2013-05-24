@@ -14,7 +14,7 @@
 ( function( $ ) {
 	$( document ).ready( function() {
 		var mapOptions = {
-			center: new google.maps.LatLng( 51.525513,-0.078462 ),
+			center: new google.maps.LatLng( 19.960511950481912,73.82726669311523 ),
 			zoom: 15,
 			disableDefaultUI: true,
 			mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -23,15 +23,15 @@
 		var map = new google.maps.Map( document.getElementById( 'map-canvas' ), mapOptions );
 
 		var image = 'img/pin-name.png';
-		var address = new google.maps.LatLng( 51.525513,-0.079462 );
+		var address = new google.maps.LatLng( 19.960511950481912,73.82726669311523 );
 		var marker1 = new google.maps.Marker({
 			position: address,
 			map: map,
 			icon: image
 		});
-
+		
 		image = 'img/pin.png';
-		address = new google.maps.LatLng( 51.52, -0.072 );
+		address = new google.maps.LatLng( 19.960511950481912, 73.82726669311523 );
 		var marker2 = new google.maps.Marker({
 			position: address,
 			map: map,

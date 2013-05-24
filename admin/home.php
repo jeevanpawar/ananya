@@ -188,14 +188,9 @@
 						</div>
 					</div>
 					<div class="box-content">
-						<h1>Charisma <small>free, premium quality, responsive, multiple skin admin template.</small></h1>
-						<p>Its a live demo of the template. I have created Charisma to ease the repeat work I have to do on my projects. Now I re-use Charisma as a base for my admin panel work and I am sharing it with you :)</p>
-						<p><b>All pages in the menu are functional, take a look at all, please share this with your followers.</b></p>
+						<h1>Ananya Cosmetics <small></small></h1>
 						
-						<p class="center">
-							<a href="http://usman.it/free-responsive-admin-template" class="btn btn-large btn-primary"><i class="icon-chevron-left icon-white"></i> Back to article</a> 
-							<a href="http://usman.it/free-responsive-admin-template" class="btn btn-large"><i class="icon-download-alt"></i> Download Page</a>
-						</p>
+						
 						<div class="clearfix"></div>
 					</div>
 				</div>
