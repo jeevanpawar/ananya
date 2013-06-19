@@ -25,6 +25,21 @@
 	  .sidebar-nav {
 		padding: 9px 0;
 	  }
+	  .copy
+	  {
+		  position:relative;
+		background-color:#09C;
+		left:-1px;
+		right:-1px;
+		color:#000;
+		text-align:center;
+		height:40px;
+		bottom:5px;
+	  }
+	  .copy a
+	  {
+		  color:#000;
+	  }
 	</style>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="css/charisma-app.css" rel="stylesheet">
@@ -66,23 +81,7 @@
 				<a class="brand" href="index.html"><span>Ananya Cosmetics</span></a>
 				
 				<!-- theme selector starts -->
-				<div class="btn-group pull-right theme-container" >
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="icon-tint"></i><span class="hidden-phone"> Change Theme / Skin</span>
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu" id="themes">
-						<li><a data-value="classic" href="#"><i class="icon-blank"></i> Classic</a></li>
-						<li><a data-value="cerulean" href="#"><i class="icon-blank"></i> Cerulean</a></li>
-						<li><a data-value="cyborg" href="#"><i class="icon-blank"></i> Cyborg</a></li>
-						<li><a data-value="redy" href="#"><i class="icon-blank"></i> Redy</a></li>
-						<li><a data-value="journal" href="#"><i class="icon-blank"></i> Journal</a></li>
-						<li><a data-value="simplex" href="#"><i class="icon-blank"></i> Simplex</a></li>
-						<li><a data-value="slate" href="#"><i class="icon-blank"></i> Slate</a></li>
-						<li><a data-value="spacelab" href="#"><i class="icon-blank"></i> Spacelab</a></li>
-						<li><a data-value="united" href="#"><i class="icon-blank"></i> United</a></li>
-					</ul>
-				</div>
+				
 				<!-- theme selector ends -->
 				
 				<!-- user dropdown starts -->
@@ -92,8 +91,6 @@
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
-						<li class="divider"></li>
 						<li><a href="index.php">Logout</a></li>
 					</ul>
 				</div>
@@ -122,11 +119,10 @@
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">Main</li>
 						<li><a class="ajax-link" href="home.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li><a class="ajax-link" href="beauty.php"><i class="icon-eye-open"></i><span class="hidden-tablet"> Beauty Tips</span></a></li>
-						<li><a class="ajax-link" href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Advertisment</span></a></li>
-						<li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Feature Products</span></a></li>
-						<li><a class="ajax-link" href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Latest Products</span></a></li>
-						<li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
+						<li><a class="ajax-link" href="slider.php"><i class="icon-eye-open"></i><span class="hidden-tablet">Sliders</span></a></li>
+                        <li><a class="ajax-link" href="beauty.php"><i class="icon-eye-open"></i><span class="hidden-tablet"> Beauty Tips</span></a></li>
+						<li><a class="ajax-link" href="advertisement.php"><i class="icon-edit"></i><span class="hidden-tablet"> Advertisment</span></a></li>
+						<li><a class="ajax-link" href="feature.php"><i class="icon-list-alt"></i><span class="hidden-tablet"> Feature Products</span></a></li>
 						
 					</ul>
 					
@@ -225,8 +221,9 @@
 		</div>
 
 		<footer>
-			<p class="pull-left">&copy; <a href="http://www.ananyacosmetics.com" target="_blank">Ananya Cosmetics</a> 2013</p>
-			<p class="pull-right">Powered by: <a href="http://www.wavetechline.com">Wave TechLine India Pvt. Ltd.</a></p>
+			<div align="center" class="copy">Copyright @<a href="http://www.ananyacosmetics.com" target="_blank">Ananya Cosmetics</a> 2013<br>
+			Powered by: <a href="http://www.wavetechline.com">Wave TechLine India Pvt. Ltd.</a>
+            </div>
 		</footer>
 		
 	</div><!--/.fluid-container-->

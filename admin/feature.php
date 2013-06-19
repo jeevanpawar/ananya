@@ -1,18 +1,57 @@
+<?php
+	error_reporting(0);
+	include("config.inc.php");
+	$qry="select * from f_product";
+	$res=mysql_query($qry);
+	
+?>
+<?php
+    
+
+    if(isset($_REQUEST['id'])) 
+	{
+		$a=$_REQUEST['id'];
+		$del="select * from f_product where f_id=".$a;
+		$res_del=mysql_query($del);
+		$row_del=mysql_fetch_array($res_del);
+		
+		if($row_del["f_image"]!="") {  
+		$photo=$row_del["f_image"];
+		unlink("photos/".$photo);
+		}
+		
+		
+		
+		$del=$_REQUEST['id'];
+		$query = "delete from f_product where f_id=".$del;
+		$res_q=mysql_query($query);
+		
+		if($res_q);
+		{
+			header("location:feature.php");
+		}
+			
+	}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
+<script type="text/javascript">
+function confirmSubmit()
+{
+var agree=confirm("Are you sure to Delete this Entry?");
+if (agree)
+	return true ;
+else
+	return false ;
+}
+
+</script>
 <head>
-	<!--
-		Charisma v1.0.0
 
-		Copyright 2012 Muhammad Usman
-		Licensed under the Apache License v2.0
-		http://www.apache.org/licenses/LICENSE-2.0
-
-		http://usman.it
-		http://twitter.com/halalit_usman
-	-->
 	<meta charset="utf-8">
-	<title>Free HTML5 Bootstrap Admin Template</title>
+	<title>Ananya Cosmetics</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
 	<meta name="author" content="Muhammad Usman">
@@ -25,6 +64,21 @@
 	  }
 	  .sidebar-nav {
 		padding: 9px 0;
+	  }
+	  .copy
+	  {
+		position:fixed;
+		background-color:#09C;
+		left:-1px;
+		right:-1px;
+		color:#000;
+		text-align:center;
+		height:40px;
+		bottom:5px;
+	  }
+	  .copy a
+	  {
+		  color:#000;
 	  }
 	</style>
 	<link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -64,26 +118,10 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"> <img alt="Charisma Logo" src="img/logo20.png" /> <span>Charisma</span></a>
+				<a class="brand" href="index.html"><span>Ananya Cosmetics</span></a>
 				
 				<!-- theme selector starts -->
-				<div class="btn-group pull-right theme-container" >
-					<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="icon-tint"></i><span class="hidden-phone"> Change Theme / Skin</span>
-						<span class="caret"></span>
-					</a>
-					<ul class="dropdown-menu" id="themes">
-						<li><a data-value="classic" href="#"><i class="icon-blank"></i> Classic</a></li>
-						<li><a data-value="cerulean" href="#"><i class="icon-blank"></i> Cerulean</a></li>
-						<li><a data-value="cyborg" href="#"><i class="icon-blank"></i> Cyborg</a></li>
-						<li><a data-value="redy" href="#"><i class="icon-blank"></i> Redy</a></li>
-						<li><a data-value="journal" href="#"><i class="icon-blank"></i> Journal</a></li>
-						<li><a data-value="simplex" href="#"><i class="icon-blank"></i> Simplex</a></li>
-						<li><a data-value="slate" href="#"><i class="icon-blank"></i> Slate</a></li>
-						<li><a data-value="spacelab" href="#"><i class="icon-blank"></i> Spacelab</a></li>
-						<li><a data-value="united" href="#"><i class="icon-blank"></i> United</a></li>
-					</ul>
-				</div>
+				
 				<!-- theme selector ends -->
 				
 				<!-- user dropdown starts -->
@@ -93,16 +131,15 @@
 						<span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="#">Profile</a></li>
-						<li class="divider"></li>
-						<li><a href="login.html">Logout</a></li>
+						
+						<li><a href="index.php">Logout</a></li>
 					</ul>
 				</div>
 				<!-- user dropdown ends -->
 				
 				<div class="top-nav nav-collapse">
 					<ul class="nav">
-						<li><a href="#">Visit Site</a></li>
+						<li><a href="http://www.ananyacosmetics.com">Visit Site</a></li>
 						<li>
 							<form class="navbar-search pull-left">
 								<input placeholder="Search" class="search-query span2" name="query" type="text">
@@ -122,23 +159,14 @@
 				<div class="well nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
 						<li class="nav-header hidden-tablet">Main</li>
-						<li><a class="ajax-link" href="index.html"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
-						<li><a class="ajax-link" href="ui.html"><i class="icon-eye-open"></i><span class="hidden-tablet"> UI Features</span></a></li>
-						<li><a class="ajax-link" href="form.html"><i class="icon-edit"></i><span class="hidden-tablet"> Forms</span></a></li>
-						<li><a class="ajax-link" href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
-						<li><a class="ajax-link" href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
-						<li><a class="ajax-link" href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
-						<li class="nav-header hidden-tablet">Sample Section</li>
-						<li><a class="ajax-link" href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>
-						<li><a class="ajax-link" href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
-						<li><a class="ajax-link" href="grid.html"><i class="icon-th"></i><span class="hidden-tablet"> Grid</span></a></li>
-						<li><a class="ajax-link" href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
-						<li><a href="tour.html"><i class="icon-globe"></i><span class="hidden-tablet"> Tour</span></a></li>
-						<li><a class="ajax-link" href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>
-						<li><a href="error.html"><i class="icon-ban-circle"></i><span class="hidden-tablet"> Error Page</span></a></li>
-						<li><a href="login.html"><i class="icon-lock"></i><span class="hidden-tablet"> Login Page</span></a></li>
+						<li><a class="ajax-link" href="home.php"><i class="icon-home"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a class="ajax-link" href="slider.php"><i class="icon-eye-open"></i><span class="hidden-tablet">Sliders</span></a></li>
+                        <li><a class="ajax-link" href="beauty.php"><i class="icon-eye-open"></i><span class="hidden-tablet"> Beauty Tips</span></a></li>
+						<li><a class="ajax-link" href="advertisement.php"><i class="icon-edit"></i><span class="hidden-tablet"> Advertisment</span></a></li>
+						<li><a class="ajax-link" href="feature.php"><i class="icon-list-alt"></i><span class="hidden-tablet"> Feature Products</span></a></li>
+						
 					</ul>
-					<label id="for-is-ajax" class="hidden-tablet" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
+					
 				</div><!--/.well -->
 			</div><!--/span-->
 			<!-- left menu ends -->
@@ -153,22 +181,22 @@
 			<div id="content" class="span10">
 			<!-- content starts -->
 			
-
+		
 			<div>
 				<ul class="breadcrumb">
 					<li>
 						<a href="#">Home</a> <span class="divider">/</span>
 					</li>
 					<li>
-						<a href="#">Blank</a>
+						<a href="beauty.php">Beauty Tips</a>
 					</li>
 				</ul>
 			</div>
-
-			<div class="row-fluid sortable">
+			<div><a href="add_product.php">Add New Products</a></div>
+			<div class="row-fluid sortable">	
 				<div class="box span12">
 					<div class="box-header well" data-original-title>
-						<h2><i class="icon-picture"></i>Blank</h2>
+						<h2><i class="icon-plus"></i>Product Details</h2>
 						<div class="box-icon">
 							<a href="#" class="btn btn-setting btn-round"><i class="icon-cog"></i></a>
 							<a href="#" class="btn btn-minimize btn-round"><i class="icon-chevron-up"></i></a>
@@ -176,13 +204,59 @@
 						</div>
 					</div>
 					<div class="box-content">
-						
-					</div>
+						<table class="table table-bordered table-striped">
+							<tr>
+								<td><strong>Id</strong></td>
+								<td><strong>Image</strong></td>
+                                <td><strong>Product Name</strong></td>
+								<td><strong>Category</strong></td>
+                                <td><strong>Type</strong></td>
+                                <td><strong>Delete</strong></td>
+							</tr>
+							<?php
+					
+								while($row=mysql_fetch_array($res))
+								{
+									echo "<tr>";
+									
+									echo "<td>";
+									echo $row[0];
+									echo "</td>";
+									
+									echo "<td>";
+									echo "<img src='photos/$row[1]' width='120' height='70'>";
+									echo "</td>";
+									
+									echo "<td>";
+									echo $row[2];
+									echo "</td>";
+									
+									echo "<td>";
+									echo $row[3];
+									echo "</td>";
+									
+									echo "<td>";
+									echo $row[4];
+									echo "</td>";
+									
+									
+									echo "<td>";
+									echo "<a href='?id=$row[0]' onclick='return confirmSubmit()'>Delete</a>";
+									echo "</td>";
+									
+									echo "</tr>";
+								}
+							?>
+						</table>
+					</div>	
 				</div><!--/span-->
-			
+				
 			</div><!--/row-->
 
-    
+			<!--/row-->
+			<!--/row-->
+			
+		
 					<!-- content ends -->
 			</div><!--/#content.span10-->
 				</div><!--/fluid-row-->
@@ -204,8 +278,9 @@
 		</div>
 
 		<footer>
-			<p class="pull-left">&copy; <a href="http://usman.it" target="_blank">Muhammad Usman</a> 2012</p>
-			<p class="pull-right">Powered by: <a href="http://usman.it/free-responsive-admin-template">Charisma</a></p>
+			<div align="center" class="copy">Copyright @<a href="http://www.ananyacosmetics.com" target="_blank">Ananya Cosmetics</a> 2013<br>
+			Powered by: <a href="http://www.wavetechline.com">Wave TechLine India Pvt. Ltd.</a>
+            </div>
 		</footer>
 		
 	</div><!--/.fluid-container-->
